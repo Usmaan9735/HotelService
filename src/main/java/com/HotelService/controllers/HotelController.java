@@ -28,8 +28,13 @@ public class HotelController {
         return ResponseEntity.status(HttpStatus.OK).body(hotelService.get(hotelId));
     }
     @GetMapping
-    public ResponseEntity<List<Hotel>> getAl(){
-
+    public ResponseEntity<List<Hotel>> getAllHotels() {
         return ResponseEntity.ok(hotelService.getAll());
+    }
+    // Update an existing hotel
+    @PutMapping("/{hotelId}")
+    public ResponseEntity<Hotel> updateHotel(@PathVariable String hotelId, @RequestBody Hotel hotel) {
+        hotel.setId(hotelId); // Ensure the hotel ID is set correctly
+        return ResponseEntity.status(HttpStatus.OK).body(hotelService.update(hotel));
     }
 }

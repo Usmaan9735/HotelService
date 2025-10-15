@@ -16,4 +16,5 @@ public interface HotelService {
     //get single
     Hotel get(String id);
 
+    Hotel update(Hotel hotel);
 }
