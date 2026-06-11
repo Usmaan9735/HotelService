@@ -30,6 +30,7 @@ public class HotelController {
     }
     @GetMapping
     public ResponseEntity<List<Hotel>> getAllHotels() {
+
         return ResponseEntity.ok(hotelService.getAll());
     }
     // Update an existing hotel
