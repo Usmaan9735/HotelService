@@ -1,8 +1,6 @@
 package com.HotelService.entities;
 
-import lombok.*;
 
-import javax.persistence.*;
 
 @Data
 @Entity
